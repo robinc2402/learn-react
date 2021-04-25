@@ -4,10 +4,10 @@ import * as calculate from "./Calc";
 ReactDOM.render(
   <>
     <ul>
-      <li>Sum of two no is {calculate.add(30, 3)} </li>
-      <li>Sub of two no is {calculate.sub(30, 3)} </li>
-      <li>Mult of two no is {calculate.mult(30, 3)} </li>
-      <li>Div of two no is {calculate.div(30, 3)} </li>
+      <li>Sum of 30 & 3 is = {calculate.add(30, 3)} </li>
+      <li>Sub of 30 & 3 is = {calculate.sub(30, 3)} </li>
+      <li>Mult of 30 & 3 is = {calculate.mult(30, 3)} </li>
+      <li>Div of 30 & 3 is = {calculate.div(30, 3)} </li>
     </ul>
   </>,
   document.getElementById("root")
