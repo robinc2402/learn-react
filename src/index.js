@@ -11,9 +11,16 @@ const img1 = "https://picsum.photos/200/200";
 const img2 = "https://picsum.photos/300/200";
 const img3 = "https://picsum.photos/100/200";
 
+const headingStyle = {
+  color: "Red",
+  fontWeight: "600"
+};
+
 ReactDOM.render(
   <>
-    <h1 className="title">Something</h1>
+    <h1 className="title" style={headingStyle}>
+      Something
+    </h1>
     <p>The date is {date}</p>
     <p>The date is {time}</p>
     <img src={img1} alt="example" />
