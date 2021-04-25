@@ -6,6 +6,10 @@ import Images from "./Images";
 
 const something = "Hi!";
 
+function myName() {
+  return "Robin";
+}
+
 function App() {
   return (
     <>
@@ -17,4 +21,4 @@ function App() {
 }
 
 export default App;
-export { something };
+export { something, myName };
