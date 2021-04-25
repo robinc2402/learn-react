@@ -4,6 +4,8 @@ import Heading from "./Heading";
 import Para from "./Para";
 import Images from "./Images";
 
+const something = "Hi!";
+
 function App() {
   return (
     <>
@@ -15,3 +17,4 @@ function App() {
 }
 
 export default App;
+export { something };
