@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import "./assets/css/cards.css";
+import "../assets/css/cards.css";
 import Sdata from "./CardData";
 
 function CardGrid() {
