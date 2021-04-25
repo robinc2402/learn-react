@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App, { something, myName } from "./App";
+import * as AppObj from "./App";
 ReactDOM.render(
   <>
-    <App />
-    {something}
-    {" " + myName()}
+    {AppObj.default()}
+    {AppObj.something}
+    {" " + AppObj.myName()}
   </>,
   document.getElementById("root")
 );
