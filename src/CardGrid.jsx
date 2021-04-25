@@ -6,9 +6,10 @@ import Sdata from "./CardData";
 function CardGrid() {
   return (
     <div className="cards">
-      {Sdata.map((val) => {
+      {Sdata.map((val, i) => {
         return (
           <Card
+            key={i}
             imgsrc={val.imgsrc}
             title={val.title}
             sname={val.snam}
