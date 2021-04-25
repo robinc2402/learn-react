@@ -1,20 +1,14 @@
 import React from "react";
 import CardImage from "./CardImage";
-import CardHeading from "./CardHeading";
+import CardInfo from "./CardInfo";
 
-function Card(props) {
+const Card = (props) => {
   return (
     <div className="card">
       <CardImage imgsrc={props.imgsrc} />
-      <div className="card__info">
-        <span className="card__category">{props.sname}</span>
-        <CardHeading title={props.title} />
-        <a href="{props.link}" target="_blank">
-          <button>Watch Now</button>
-        </a>
-      </div>
+      <CardInfo sname={props.sname} title={props.title} link={props.link} />
     </div>
   );
-}
+};
 
 export default Card;
