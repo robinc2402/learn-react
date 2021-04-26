@@ -1,24 +1,20 @@
-import React from "react";
-import "./index.css";
-import Heading from "./Heading";
-import Para from "./Para";
-import Images from "./Images";
+import React, { useState } from "react";
 
-const something = "Hi!";
+const App = () => {
+  const [count, setCount] = useState(100);
 
-function myName() {
-  return "Robin";
-}
+  const Incme = () => {
+    setCount(count - 1);
+  };
 
-function App() {
   return (
     <>
-      <Heading />
-      <Para />
-      <Images />
+      <div style={{ textAlign: "center", color: "green" }}>
+        <h1>{count}</h1>
+        <button onClick={Incme}>Click me</button>
+      </div>
     </>
   );
-}
+};
 
 export default App;
-export { something, myName };
