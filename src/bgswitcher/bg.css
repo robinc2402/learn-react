@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+#root {
+  display: flex;
+}
+#bg-container {
+  background-color: pink;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-content: flex-start;
+
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#my-button {
+  cursor: pointer;
+}
