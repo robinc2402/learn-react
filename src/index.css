@@ -43,7 +43,7 @@ input {
   border: 2px solid #ccc;
   border-radius: 3px;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 }
 #my-button {
   display: block;
