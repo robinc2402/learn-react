@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 // import App from "./miniclock/App";
 // import App from "./bgswitcher/App";
 //import App from "./basicForm/App";
-import App from "./multiInputForm/App";
+// import App from "./multiInputForm/App";
+import App from "./ArrDestructuringSpreading/App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
