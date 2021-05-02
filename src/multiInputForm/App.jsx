@@ -10,8 +10,6 @@ const App = () => {
 
   const formSubmit = (event) => {
     event.preventDefault();
-    // console.log(event.target.value);
-    //setData();
   };
 
   const inputEvent = (event) => {
@@ -21,6 +19,20 @@ const App = () => {
           firstname: event.target.value,
           lastname: preValue.lastname,
           email: preValue.email
+        };
+      }
+      if ("lastname" === event.target.name) {
+        return {
+          firstname: preValue.firstname,
+          lastname: event.target.value,
+          email: preValue.email
+        };
+      }
+      if ("email" === event.target.name) {
+        return {
+          firstname: preValue.firstname,
+          lastname: preValue.lastname,
+          email: event.target.value
         };
       }
     });
