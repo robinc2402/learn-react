@@ -45,7 +45,8 @@ input {
   overflow: hidden;
   margin: 0 auto 10px;
 }
-#my-button {
+#my-button,
+#button {
   display: block;
   cursor: pointer;
   padding: 10px 20px;
