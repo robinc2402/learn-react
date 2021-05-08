@@ -8,6 +8,20 @@ const App = () => {
   const allGames = [...myGames, ...latestGames];
   console.log(allGames);
 
+  // Array destrcture
+  const [first, ...remaining] = latestGames;
+  console.log(first);
+  console.log(remaining);
+
+  // array spread as a sub-array
+  const everything = {
+    id: 12,
+    games: [...allGames],
+    param1: 23
+  };
+
+  console.log(everything);
+
   return (
     <div id="container">
       <h1 id="heading">Array Spread and Destructuring</h1>
