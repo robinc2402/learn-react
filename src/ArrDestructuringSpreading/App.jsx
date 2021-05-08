@@ -25,6 +25,11 @@ const App = () => {
   return (
     <div id="container">
       <h1 id="heading">Array Spread and Destructuring</h1>
+      <div>Destructure -- {JSON.stringify(first)}</div>
+      <hr />
+      <div>Spread -- {JSON.stringify(allGames)}</div>
+      <hr />
+      <div>Spread + Merge -- {JSON.stringify(everything)}</div>
     </div>
   );
 };
