@@ -1,3 +1,6 @@
+@import url("//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("//fonts.googleapis.com/icon?family=Material+Icons");
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -54,4 +57,44 @@ input {
   margin: 10px auto;
   border-radius: 3px;
   border: 2px solid #ccc;
+}
+
+#todo {
+  width: 300px;
+  min-height: 200px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 14px 3px rgb(221 167 177);
+  padding: 10px 0;
+  overflow: hidden;
+}
+#todo #heading {
+  background-color: pink;
+  color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#inner {
+  padding: 30px;
+  border: 1px solid #333;
+}
+
+#todo #inner #addItem input[type="text"] {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  text-align: center;
+  border-bottom: 4px solid pink;
+  border-radius: none;
+}
+#todo #inner #addItem input[type="text"] #todo #inner #addItem button {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  font-weight: bold;
+  border: none;
+  background-color: pink;
+  color: #fff;
+  box-shadow: 0 0 14px 3px rgb(221 167 177);
 }
