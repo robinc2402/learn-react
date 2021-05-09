@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
 import SaveIcon from "@material-ui/icons/Save";
 import IconButton from "@material-ui/core/IconButton";
+import SingleListItem from "./SingleListItem";
 import "../index.css";
-import { PregnantWoman } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -14,36 +14,31 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const App = () => {
-  let defaultData = ["Buy apples"];
-  const [items, UpdateItems] = useState(defaultData);
+  const [items, UpdateItems] = useState([]);
 
-  const addItem = (e) => {
-    //debugger;
+  const addItem = () => {
     // let newItemText = document.getElementById("newItem").value;
-
-    let newItemText = e.target.value;
-
+    let newVal = document.getElementById("newItem").value;
+    if (!newVal.length) {
+      return;
+    }
     UpdateItems((prevState) => {
-      return {
-        ...prevState,
-        newItemText
-      };
+      return [...prevState, newVal];
     });
+    document.getElementById("newItem").value = "";
+  };
 
-    console.log(items);
+  const deleteItem = (id) => {
+    UpdateItems((prevState) => {
+      return prevState.filter((arrElem, index) => {
+        return index !== id;
+      });
+    });
   };
 
   const listItems = () => {
-    return items.forEach((element) => {
-      return (
-        <div className="itemSingle">
-          {/* <IconButton aria-label="delete">
-            <DeleteIcon />
-          </IconButton> */}
-          <button>x</button>
-          <span id="itemText">{element}</span>
-        </div>
-      );
+    return items.map((element, i) => {
+      return <SingleListItem text={element} id={i} delete={deleteItem} />;
     });
   };
 
@@ -55,13 +50,12 @@ const App = () => {
         <div id="todo">
           <h1 id="heading">TODO List</h1>
           <div id="inner">
-            <div id="addItem">
+            <div id="addItems">
               <input
                 type="text"
                 name="newItem"
                 id="newItem"
                 placeholder="Add an item"
-                onChange={addItem}
               />
               <Button
                 id="addNewItem"
@@ -73,7 +67,7 @@ const App = () => {
                 onClick={addItem}
               ></Button>
             </div>
-            <div id="itemsList">{items}</div>
+            <div id="itemsList">{listItems()}</div>
           </div>
         </div>
       </div>

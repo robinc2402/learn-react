@@ -77,7 +77,6 @@ input {
 
 #inner {
   padding: 30px;
-  border: 1px solid #333;
 }
 
 #todo #inner #addItem input[type="text"] {
@@ -97,4 +96,30 @@ input {
   background-color: pink;
   color: #fff;
   box-shadow: 0 0 14px 3px rgb(221 167 177);
+}
+#todo #itemsList {
+  text-align: left;
+}
+#todo .itemText::first-letter {
+  text-transform: uppercase;
+}
+#todo #addItems {
+  display: flex;
+}
+#todo #addItems #newItem {
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+#todo #addItems #newItem,
+#todo #addItems #addNewItem {
+  display: inline-block;
+  margin: 0 2px;
+}
+#todo #addItems #addNewItem {
+  background-color: pink;
+}
+#todo #itemsList {
+  padding-top: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
 }
